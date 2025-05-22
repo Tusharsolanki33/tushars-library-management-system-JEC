@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/logo.png">
+    <title>User Account - JEC Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="user-account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./assets/logo.png" alt="JEC Logo" class="logo">
+            <div class="college-name">
+                <h1>Jabalpur Engineering College</h1>
+                <h2>Library Management System</h2>
+            </div>
+        </div>
+        <nav>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#catalog">Catalog</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="user-dashboard">
+        <div class="container">
+            <h2 class="section-title">User Dashboard</h2>
+            
+            <div class="dashboard-container">
+                <div class="user-sidebar">
+                    <div class="user-profile">
+                        <div class="profile-image">
+                            <img src="https://via.placeholder.com/150" alt="User Profile" id="profile-image">
+                        </div>
+                        <h3 id="user-name">Rahul Singh</h3>
+                        <p id="user-id">0201IT221120</p>
+                        <p id="user-type">Student</p>
+                    </div>
+                    <ul class="dashboard-menu">
+                        <li class="active"><a href="#overview"><i class="fas fa-home"></i> Overview</a></li>
+                        <li><a href="#borrowed"><i class="fas fa-book"></i> Borrowed Books</a></li>
+                        <li><a href="#history"><i class="fas fa-history"></i> History</a></li>
+                        <li><a href="#fines"><i class="fas fa-rupee-sign"></i> Fines</a></li>
+                        <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="dashboard-content">
+                    <div class="dashboard-section active" id="overview">
+                        <h3>Welcome, <span id="welcome-name">Rahul</span>!</h3>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <i class="fas fa-book"></i>
+                                <h4>3</h4>
+                                <p>Books Borrowed</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-clock"></i>
+                                <h4>2</h4>
+                                <p>Due Soon</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-rupee-sign"></i>
+                                <h4>₹0</h4>
+                                <p>Outstanding Fines</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-bookmark"></i>
+                                <h4>5</h4>
+                                <p>Wishlist Items</p>
+                            </div>
+                        </div>
+                        
+                        <div class="recent-activity">
+                            <h3>Recent Activity</h3>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon borrow">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Borrowed: Data Structures and Algorithms</h4>
+                                        <p>March 25, 2025 - Due on April 8, 2025</p>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon return">
+                                        <i class="fas fa-arrow-left"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Returned: Computer Networks</h4>
+                                        <p>March 20, 2025</p>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon borrow">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Borrowed: Database Management Systems</h4>
+                                        <p>March 15, 2025 - Due on March 29, 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-section" id="borrowed">
+                        <h3>Currently Borrowed Books</h3>
+                        <div class="borrowed-books">
+                            <div class="book-item">
+                                <div class="book-cover">
+                                    <img src="assets/dsa.webp" alt="Data Structures and Algorithms">
+                                </div>
+                                <div class="book-details">
+                                    <h4>Data Structures and Algorithms</h4>
+                                    <p><strong>Author:</strong> Thomas H. Cormen</p>
+                                    <p><strong>Borrowed on:</strong> March 25, 2025</p>
+                                    <p><strong>Due date:</strong> April 8, 2025</p>
+                                    <p class="due-soon">Due in 8 days</p>
+                                    <button class="renew-btn">Renew</button>
+                                </div>
+                            </div>
+                            <div class="book-item">
+                                <div class="book-cover">
+                                    <img src="./assets/dbms.jpg" alt="Database Management Systems">
+                                </div>
+                                <div class="book-details">
+                                    <h4>Database Management Systems</h4>
+                                    <p><strong>Author:</strong> Raghu Ramakrishnan</p>
+                                    <p><strong>Borrowed on:</strong> March 15, 2025</p>
+                                    <p><strong>Due date:</strong> March 29, 2025</p>
+                                    <p class="overdue">Overdue by 2 days</p>
+                                    <button class="renew-btn">Renew</button>
+                                </div>
+                            </div>
+                            <div class="book-item">
+                                <div class="book-cover">
+                                    <img src="./assets/cn.webp" alt="Operating Systems">
+                                </div>
+                                <div class="book-details">
+                                    <h4>Computer Networks</h4>
+                                    <p><strong>Author:</strong> Andrew S. Tanenbaum</p>
+                                    <p><strong>Borrowed on:</strong> March 10, 2025</p>
+                                    <p><strong>Due date:</strong> March 24, 2025</p>
+                                    <p class="overdue">Overdue by 7 days</p>
+                                    <button class="renew-btn">Renew</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-section" id="history">
+                        <h3>Borrowing History</h3>
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>Book Title</th>
+                                    <th>Borrowed Date</th>
+                                    <th>Return Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Computer Networks</td>
+                                    <td>March 5, 2025</td>
+                                    <td>March 20, 2025</td>
+                                    <td><span class="status returned">Returned</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Artificial Intelligence</td>
+                                    <td>February 15, 2025</td>
+                                    <td>March 1, 2025</td>
+                                    <td><span class="status returned">Returned</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Software Engineering</td>
+                                    <td>January 20, 2025</td>
+                                    <td>February 5, 2025</td>
+                                    <td><span class="status returned">Returned</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Digital Logic Design</td>
+                                    <td>January 10, 2025</td>
+                                    <td>January 25, 2025</td>
+                                    <td><span class="status returned">Returned</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Theory of Computation</td>
+                                    <td>December 15, 2024</td>
+                                    <td>December 30, 2024</td>
+                                    <td><span class="status returned">Returned</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="dashboard-section" id="fines">
+                        <h3>Fines and Payments</h3>
+                        <div class="fine-summary">
+                            <div class="fine-total">
+                                <h4>Total Outstanding</h4>
+                                <p class="amount">₹150</p>
+                            </div>
+                            <button class="pay-btn">Pay Now</button>
+                        </div>
+                        <table class="fines-table">
+                            <thead>
+                                <tr>
+                                    <th>Book Title</th>
+                                    <th>Due Date</th>
+                                    <th>Return Date</th>
+                                    <th>Days Late</th>
+                                    <th>Fine Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Database Management Systems</td>
+                                    <td>March 29, 2025</td>
+                                    <td>Not Returned</td>
+                                    <td>2</td>
+                                    <td>₹20</td>
+                                    <td><span class="status unpaid">Unpaid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Operating System Concepts</td>
+                                    <td>March 24, 2025</td>
+                                    <td>Not Returned</td>
+                                    <td>7</td>
+                                    <td>₹70</td>
+                                    <td><span class="status unpaid">Unpaid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Computer Networks</td>
+                                    <td>March 19, 2025</td>
+                                    <td>March 20, 2025</td>
+                                    <td>1</td>
+                                    <td>₹10</td>
+                                    <td><span class="status paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Artificial Intelligence</td>
+                                    <td>March 1, 2025</td>
+                                    <td>March 6, 2025</td>
+                                    <td>5</td>
+                                    <td>₹50</td>
+                                    <td><span class="status unpaid">Unpaid</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="dashboard-section" id="settings">
+                        <h3>Account Settings</h3>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label for="settings-name">Full Name</label>
+                                <input type="text" id="settings-name" value="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-email">Email Address</label>
+                                <input type="email" id="settings-email" value="john.doe@jec.ac.in">
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-phone">Phone Number</label>
+                                <input type="tel" id="settings-phone" value="9876543210">
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-department">Department</label>
+                                <select id="settings-department">
+                                    <option value="cs" selected>Computer Science</option>
+                                    <option value="ee">Electrical Engineering</option>
+                                    <option value="me">Mechanical Engineering</option>
+                                    <option value="ce">Civil Engineering</option>
+                                    <option value="ec">Electronics & Communication</option>
+                                    <option value="it">Information Technology</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-password">Change Password</label>
+                                <input type="password" id="settings-password" placeholder="Enter new password">
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-confirm-password">Confirm Password</label>
+                                <input type="password" id="settings-confirm-password" placeholder="Confirm new password">
+                            </div>
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./assets/logo.png" alt="JEC Logo">
+                    <h3>Jabalpur Engineering College</h3>
+                    <p>Library Management System</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#catalog">Catalog</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">E-Journals</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Academic Databases</a></li>
+                        <li><a href="#">Library Rules</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for updates on new arrivals and events</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jabalpur Engineering College Library. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="user-account.js"></script>
+</body>
+</html>

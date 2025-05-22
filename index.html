@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/logo.png">
+    <title>JEC Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./assets/logo.png" alt="JEC Logo" class="logo">
+            <div class="college-name">
+                <h1>Jabalpur Engineering College</h1>
+                <h2>Library Management</h2>
+            </div>
+        </div>
+        <nav>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to JEC Library</h1>
+            <p>Discover, Learn, and Grow with our extensive collection of resources</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search books, journals, articles...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <section id="quick-links">
+        <div class="container">
+            <div class="quick-link-card">
+                <i class="fas fa-book"></i>
+                <h3>E-Resources</h3>
+                <p>Access digital journals, e-books, and online databases</p>
+            </div>
+            <div class="quick-link-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>New Arrivals</h3>
+                <p>Check out the latest additions to our collection</p>
+            </div>
+            <div class="quick-link-card">
+                <i class="fas fa-clock"></i>
+                <h3>Library Hours</h3>
+                <p>Mon-Sat: 8:00 AM - 8:00 PM<br>Sunday: Closed</p>
+            </div>
+            <div class="quick-link-card">
+                <i class="fas fa-question-circle"></i>
+                <h3>Help Desk</h3>
+                <p>Get assistance with your library-related queries</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Our Library</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./assets/interior.jpeg" alt="JEC Library Interior">
+                </div>
+                <div class="about-text">
+                    <p>The Jabalpur Engineering College Library is a hub of knowledge and resources for students, faculty, and researchers. Established in 1947, our library has grown to house over 100,000 books, journals, and digital resources.</p>
+                    <p>Our mission is to support the academic and research needs of the JEC community by providing access to quality information resources and services.</p>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <h3>100,000+</h3>
+                            <p>Books</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5,000+</h3>
+                            <p>E-Journals</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Seats</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Digital Access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog">
+        <div class="container">
+            <h2 class="section-title">Book Catalog</h2>
+            <div class="catalog-filters">
+                <select id="department-filter">
+                    <option value="">All Departments</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="ee">Electrical Engineering</option>
+                    <option value="me">Mechanical Engineering</option>
+                    <option value="ce">Civil Engineering</option>
+                    <option value="ec">Electronics & Communication</option>
+                </select>
+                <select id="type-filter">
+                    <option value="">All Types</option>
+                    <option value="book">Books</option>
+                    <option value="journal">Journals</option>
+                    <option value="thesis">Thesis</option>
+                    <option value="magazine">Magazines</option>
+                </select>
+                <input type="text" id="search-catalog" placeholder="Search by title, author, or keywords">
+            </div>
+            <div class="book-container" id="book-list">
+                <!-- Books will be loaded here via JavaScript -->
+            </div>
+            <div class="pagination">
+                <button id="prev-page" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                <span id="page-info">Page 1 of 10</span>
+                <button id="next-page">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Library Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>Book Borrowing</h3>
+                    <p>Borrow up to 5 books for 14 days with your student ID</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Digital Resources</h3>
+                    <p>Access e-books, journals, and databases from anywhere</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-print"></i>
+                    <h3>Printing & Scanning</h3>
+                    <p>Print and scan documents at affordable rates</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Group Study Rooms</h3>
+                    <p>Book a study room for group discussions and projects</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Wi-Fi Access</h3>
+                    <p>High-speed internet throughout the library</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Research Assistance</h3>
+                    <p>Get help with research from our expert librarians</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Jabalpur Engineering College<br>Gokalpur, Jabalpur<br>Madhya Pradesh - 482011</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 761-2331953 (Library)<br>+91 761-2331622 (Main)</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>library@jecjabalpur.ac.in<br>info@jecjabalpur.ac.in</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Library Hours</h3>
+                            <p>Monday - Saturday: 8:00 AM - 8:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./assets/logo.png" alt="JEC Logo">
+                    <h3>Jabalpur Engineering College</h3>
+                    <p>Library Management</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#catalog">Catalog</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">E-Journals</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Academic Databases</a></li>
+                        <li><a href="#">Library Rules</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for updates on new arrivals and events</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jabalpur Engineering College Library. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login to JEC Library</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="user-id">Student/Faculty ID</label>
+                    <input type="text" id="user-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button type="submit" class="login-submit-btn">Login</button>
+                <div class="form-footer">
+                    <a href="#">Forgot Password?</a>
+                    <a href="#">New User? Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
