@@ -2,6 +2,8 @@
 
 A frontend-only Library Management System for Jabalpur Engineering College developed using **HTML**, **CSS**, and **JavaScript**. This system provides users with functionalities such as user login, profile management, book renewal, fine payment, and settings updates.
 
+## Live Link: [library management system jec](https://library-management-system-jec.vercel.app/)
+
 ## 📁 Project Structure
 ```
 📦 Library Management System
